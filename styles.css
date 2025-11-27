@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2, button,  {
+  font-family: "Exo 2", sans-serif;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+}
