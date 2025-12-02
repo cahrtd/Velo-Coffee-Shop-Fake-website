@@ -21,22 +21,36 @@
   </head>
   <body>
     <header>
-      <!-- logo -->
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">The Coffee</a></li>
-          <li><a href="#">The Story</a></li>
-        </ul>
-      </nav>
-      <button>Visit Us!</button>
+      <div class="nav-container" id="nav-container">
+        <div class="nav-logo">
+          <img src="logos/velo-logo.png" alt="Velo Coffee Logo" />
+        </div>
+        <div class="nav-links">
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">The Coffee</a></li>
+              <li><a href="#">The Story</a></li>
+            </ul>
+          </nav>
+          <button class="nav-btn white-btn">Visit Us!</button>
+        </div>
+      </div>
     </header>
     <main>
-      <section>
-        <h1>Velo Coffee</h1>
-        <h2>Your Slow Down. Your Daily Brew.</h2>
-        <button>See Our Coffee</button>
-        <button>Find Our Shop</button>
+      <section class="hero-section" id="hero-section">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>Velo Coffee</h1>
+              <h2>Your Slow Down. Your Daily Brew.</h2>
+            </div>
+            <div class="hero-btns">
+              <button class="hero-coffee-btn white-btn">See Our Coffee</button>
+              <button class="hero-contact-btn blank-btn">Find Our Shop</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h2>A Moment of Quiet Clarity</h2>
@@ -131,5 +145,6 @@
         </nav>
       </div>
     </footer>
+    <script src="scripts.js"></script>
   </body>
 </html>
