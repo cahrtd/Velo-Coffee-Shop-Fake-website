@@ -144,28 +144,28 @@ p {
   gap: 16px;
   display: flex;
 }
-/* STORY SECTION */
-.story-section {
+/* VALUES SECTION */
+.values-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
 }
-.story-section-intro {
+.values-section-intro {
   padding: 32px 64px 0;
   gap: 24px;
   display: flex;
   flex-direction: column;
 }
-.story-section-intro h2 {
+.values-section-intro h2 {
   font-size: 3rem;
   color: var(--primary-color-dark);
 }
-.story-section-intro p {
+.values-section-intro p {
   font-size: 1.6rem;
   color: var(--secondary-color);
 }
-.story-section-articles {
+.values-section-articles {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -173,7 +173,7 @@ p {
   padding: 0 64px;
   flex-direction: row;
 }
-.story-article {
+.values-article {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -187,7 +187,7 @@ p {
   overflow: hidden;
   padding: 24px;
 }
-.story-article::before {
+.values-article::before {
   content: "";
   position: absolute;
   top: 0;
@@ -198,18 +198,18 @@ p {
   pointer-events: none;
   z-index: 1;
 }
-.story-article h4,
-.story-article p {
+.values-article h4,
+.values-article p {
   position: relative;
   z-index: 2;
 }
-.story-article h4 {
+.values-article h4 {
   font-size: 1.8rem;
   font-family: var(--family-main);
   margin-bottom: 12px;
   font-weight: 500;
 }
-.story-article p {
+.values-article p {
   font-size: 1rem;
   font-family: var(--family-secondary);
   line-height: 1.5;
