@@ -11,6 +11,11 @@
     rgba(47, 29, 28, 0.8) 90%,
     rgba(47, 29, 28, 0.9) 100%
   );
+  --article-gradient: linear-gradient(
+    to bottom,
+    rgba(74, 44, 42, 0) 0%,
+    rgba(1, 1, 1, 0.85) 100%
+  );
   --family-main: "Exo 2", sans-serif;
   --family-secondary: "Karla", sans-serif;
 }
@@ -43,7 +48,7 @@ p {
   font-size: 1.2rem;
   cursor: pointer;
 }
-.blank-btn {
+.transparent-btn {
   padding: 12px;
   background-color: transparent;
   border: 2px solid var(--primary-color-light);
@@ -115,6 +120,7 @@ p {
   display: flex;
   flex-direction: column;
   margin-left: 230px;
+  color: var(--primary-color-light);
 }
 .hero-content {
   gap: 32px;
@@ -126,13 +132,94 @@ p {
   color: var(--primary-color-light);
   font-family: var(--family-main);
   font-weight: 400;
+  text-shadow: 0 0 50px rgb(74 44 42);
 }
 .hero-section h2 {
   font-size: 2.4rem;
   font-family: var(--family-secondary);
   font-weight: 500;
+  text-shadow: 0 0 25px rgb(74 44 42);
 }
 .hero-btns {
   gap: 16px;
   display: flex;
+}
+/* STORY SECTION */
+.story-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.story-section-intro {
+  padding: 32px 64px 0;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.story-section-intro h2 {
+  font-size: 3rem;
+  color: var(--primary-color-dark);
+}
+.story-section-intro p {
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+}
+.story-section-articles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 32px;
+  padding: 0 64px;
+  flex-direction: row;
+}
+.story-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: auto;
+  height: 475px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: var(--primary-color-light);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 24px;
+}
+.story-article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--article-gradient);
+  pointer-events: none;
+  z-index: 1;
+}
+.story-article h4,
+.story-article p {
+  position: relative;
+  z-index: 2;
+}
+.story-article h4 {
+  font-size: 1.8rem;
+  font-family: var(--family-main);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.story-article p {
+  font-size: 1rem;
+  font-family: var(--family-secondary);
+  line-height: 1.5;
+}
+.article-coffee {
+  background-image: url(/images/story-coffeemach.jpg);
+}
+.article-space {
+  background-image: url(/images/story-space.jpg);
+}
+.article-eats {
+  background-image: url(/images/story-cookies.jpg);
 }
