@@ -240,13 +240,13 @@ p {
   line-height: 1.5;
 }
 .article-coffee {
-  background-image: url(/images/story-coffeemach.jpg);
+  background-image: url(images/story-coffeemach.jpg);
 }
 .article-space {
-  background-image: url(/images/story-space.jpg);
+  background-image: url(images/story-space.jpg);
 }
 .article-eats {
-  background-image: url(/images/story-cookies.jpg);
+  background-image: url(images/story-cookies.jpg);
 }
 
 /* STORY SECTION */
