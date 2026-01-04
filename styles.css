@@ -27,9 +27,10 @@
   padding: 0;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
 
 main {
@@ -51,6 +52,18 @@ h2 {
 p {
   font-family: var(--family-secondary);
   cursor: default;
+}
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* BUTTONS */
@@ -307,7 +320,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 64px;
+  padding: 90px 64px 0;
 }
 .location-container {
   display: flex;
@@ -410,7 +423,8 @@ p {
 }
 
 /* FOOTER */
-footer {
+.footer-section {
+  position: relative;
   background-color: var(--primary-color-light);
   width: 100%;
 }
