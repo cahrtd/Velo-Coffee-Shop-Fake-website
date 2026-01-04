@@ -2,6 +2,7 @@
   --primary-color-light: #fdfaf7;
   --primary-color-dark: #4a2c2a;
   --secondary-color: #6d5b54;
+  --secondary-color-light: #8f7466;
   --secondary-gradient-dark: #2f1d1c;
   --navbar-gradient: linear-gradient(
     to top,
@@ -32,7 +33,6 @@ html {
 }
 
 main {
-  height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -77,6 +77,18 @@ p {
   font-size: 1.2rem;
   cursor: pointer;
 }
+.dark-btn {
+  padding: 16px;
+  background-color: var(--primary-color-dark);
+  border: none;
+  border-radius: 12px;
+  color: var(--primary-color-light);
+  font-family: var(--family-main);
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: fit-content;
+}
 
 /* HEADER */
 .nav-container {
@@ -89,6 +101,7 @@ p {
   padding: 24px 64px 0;
   background: var(--navbar-gradient);
   transition: all 0.3s ease;
+  z-index: 3;
 }
 /* CHANGE LATER WHEN SCROLLED
 .nav-container.scrolled {
@@ -129,8 +142,7 @@ p {
   background-image: url("images/hero-background.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  min-height: 720px;
+  min-height: max(100vh, 720px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -170,8 +182,8 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  height: 100vh;
-  min-height: 720px;
+  min-height: max(100vh, 720px);
+
   width: 100%;
   padding-top: 90px;
 }
@@ -186,7 +198,7 @@ p {
   color: var(--primary-color-dark);
 }
 .values-section-intro p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--secondary-color);
 }
 .values-section-articles {
@@ -240,13 +252,13 @@ p {
   line-height: 1.5;
 }
 .article-coffee {
-  background-image: url(images/story-coffeemach.jpg);
+  background-image: url(images/story-coffeemach-2.jpg);
 }
 .article-space {
-  background-image: url(images/story-space.jpg);
+  background-image: url(images/story-space-2.jpg);
 }
 .article-eats {
-  background-image: url(images/story-cookies.jpg);
+  background-image: url(images/story-cookies-2.jpg);
 }
 
 /* STORY SECTION */
@@ -256,8 +268,7 @@ p {
     url("images/story-background.png");
   background-size: cover;
   background-position: center center;
-  height: 100vh;
-  min-height: 720px;
+  min-height: max(100vh, 720px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -284,4 +295,174 @@ p {
   font-size: 1.6rem;
   padding: 16px 32px;
   cursor: pointer;
+}
+
+/* LOCATION SECTION */
+.location-section {
+  background-image: url("images/location-background.png");
+  background-size: cover;
+  background-position: center;
+  min-height: max(100vh, 720px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 64px;
+}
+.location-container {
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+}
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin-top: 7%;
+}
+.location-container h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary-color-dark);
+}
+.location-info p {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+}
+.location-container button {
+  margin-top: 24px;
+}
+
+/* PARTNER SECTION */
+
+.partner-section {
+  background-color: var(--primary-color-light);
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0 64px;
+}
+
+.partner-section p {
+  text-align: center;
+  font-family: var(--family-main);
+  font-size: 2.2rem;
+  color: var(--secondary-color-light);
+  padding: 48px 0 24px;
+}
+
+/* PARTNERS LOGOS */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0 64px;
+}
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  padding: 0;
+  width: max-content;
+  will-change: transform;
+  /* Animation is started by JS after the track is rebuilt and images loaded */
+}
+
+.marquee-track.animate {
+  animation: scroll 45s linear infinite;
+}
+
+/* When duplicating the set of logos inside the track, translate by -50% of
+   the track's own width to create a continuous seamless loop (no blank gap).
+   The duplicated logos must be an exact copy and sit immediately after the
+   first set in the markup (already present in the HTML). */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 180px;
+}
+
+.logo-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-color-light);
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 64px;
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 8px;
+}
+.footer-info h5 {
+  font-family: var(--family-main);
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--primary-color-dark);
+}
+.footer-info p {
+  font-family: var(--family-secondary);
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  line-height: 1.5;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 48px;
+}
+.footer-menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-menu h6 {
+  font-family: var(--family-main);
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--primary-color-dark);
+}
+.footer-menu a {
+  font-family: var(--family-secondary);
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+.footer-sm-logos {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
 }

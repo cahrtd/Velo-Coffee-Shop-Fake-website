@@ -17,6 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <!-- Logos -->
+    <script
+      src="https://kit.fontawesome.com/9fc0cf826b.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Velo Coffee Shop</title>
   </head>
   <body>
@@ -38,6 +44,7 @@
       </div>
     </header>
     <main>
+      <!-- add snap container!!!!!! -->
       <section class="section hero-section" id="hero-section">
         <div class="hero-container">
           <div class="hero-content">
@@ -81,8 +88,9 @@
           <article class="values-article article-eats">
             <h4>Simple Eats</h4>
             <p>
-              Curated pastries from local bakeries, chosen to complement your
-              drink.
+              A daily selection of handcrafted pastries from our favorite
+              neighborhood bakeries, each chosen to pair perfectly with your
+              coffee or tea.
             </p>
           </article>
         </div>
@@ -99,58 +107,111 @@
           <button class="story-btn transparent-btn">Our Story</button>
         </div>
       </section>
-      <section>
+      <section class="section location-section" id="location-section">
+        <div class="location-container">
+          <div class="location-info">
+            <h2>Ready for a Better Coffee Break?</h2>
+            <p>Explore our drinks and pay us a visit.</p>
+            <button class="dark-btn">View Our Location!</button>
+          </div>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.26144927868!2d-74.14465376498653!3d40.69728414584088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sca!4v1766953539461!5m2!1sen!2sca"
+              width="900"
+              height="800"
+              style="border: 0; border-radius: 16px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="section partner-section" id="partner-section">
         <p>
           We partner with local artisans who share our commitment to quality and
           craft:
         </p>
         <!-- logos -->
-      </section>
-      <section>
-        <h2>Ready for a Better Coffee Break?</h2>
-        <p>Explore our drinks and pay us a visit.</p>
-        <button>View Our Location!</button>
-        <!-- map -->
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- First set of logos -->
+            <div class="logo-item">
+              <img src="logos/logoipsum-215.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-235.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-255.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-284.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-289.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-378.png" alt="Partner logo" />
+            </div>
+            <!-- Duplicate set of logos for seamless scrolling -->
+            <div class="logo-item">
+              <img src="logos/logoipsum-215.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-235.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-255.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-284.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-289.png" alt="Partner logo" />
+            </div>
+            <div class="logo-item">
+              <img src="logos/logoipsum-378.png" alt="Partner logo" />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
-      <div>
-        <h6>Velo Coffee</h6>
-        <p>
-          Crafting serene moments and exceptionally smooth coffee in a space
-          designed to be your urban sanctuary.
-        </p>
-      </div>
-      <!-- <div>logos</div> -->
-      <div>
-        <nav>
-          <ul>
-            <li>
-              Explore
-              <ul>
-                <li>The Coffee</li>
-                <li>The Space</li>
-                <li>Visit Us</li>
-              </ul>
-            </li>
-            <li>
-              Connect
-              <ul>
-                <li>Contact</li>
-                <li>(555) 123-1234</li>
-                <li>velocoffee@email.com</li>
-              </ul>
-            </li>
-            <li>
-              Legal
-              <ul>
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-                <li>&copy; 2024 Velo Coffee Shop</li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h5>Velo Coffee</h5>
+          <p>
+            Crafting serene moments and exceptionally smooth coffee in a space
+            designed to be your urban sanctuary.
+          </p>
+          <div class="footer-sm-logos">
+            <i class="fa-brands fa-instagram fa-xl" style="color: #6d5b54"></i>
+            <i class="fa-brands fa-x-twitter fa-xl" style="color: #6d5b54"></i>
+            <i class="fa-brands fa-facebook-f fa-xl" style="color: #6d5b54"></i>
+          </div>
+        </div>
+
+        <div class="footer-menu">
+          <div class="footer-menu-options">
+            <h6>Explore</h6>
+            <a href="">The Coffee</a>
+            <a href="">The Space</a>
+            <a href="">Visit Us</a>
+          </div>
+          <div class="footer-menu-options">
+            <h6>Connect</h6>
+            <a href="">Contact</a>
+            <a href="tel:+1-555-123-1234">(555) 123-1234</a>
+            <a href="mailto:velocoffee@email.com">velocoffee@email.com</a>
+          </div>
+          <div class="footer-menu-options">
+            <h6>Legal</h6>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Service</a>
+            <a href="">&copy; 2024 Velo Coffee Shop</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="scripts.js"></script>
